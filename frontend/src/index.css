@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* react date picker wrapper override classes */
+.react-date-picker__wrapper {
+  @apply w-full rounded-md border border-gray-500 p-2;
+}
+
+/* Add red border based on parents aria-invalid value */
+div[aria-invalid="true"] .react-date-picker__wrapper,
+div[aria-invalid="true"] input,
+div[aria-invalid="true"] .controlled__control {
+  @apply !border-red-600;
+}
